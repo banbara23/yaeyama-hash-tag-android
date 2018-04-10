@@ -1,29 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="16dp"
-    >
+<layout>
+    <data>
+        <variable
+            name="fragment"
+            type="ikemura.com.yaeyama_hash_tag_android.MainFragment"
+            />
+    </data>
 
-    <LinearLayout
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        tools:context=".MainFragment"
+        android:layout_margin="16dp"
         >
 
-        <Button
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="#八重山"
-            />
+            android:orientation="vertical"
+            tools:context=".MainFragment"
+            >
 
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="#石垣島"
-            />
-    </LinearLayout>
-</ScrollView>
+            <Button
+                android:id="@+id/yaeyama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="#八重山"
+                android:onClick='@{() -> fragment.navigateToTabActivity("yaeyama")}'
+                />
+
+            <Button
+                android:id="@+id/ishigaki"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="#石垣島"
+                android:onClick='@{() -> fragment.navigateToTabActivity("ishigaki")}'
+                />
+        </LinearLayout>
+    </ScrollView>
+</layout>
