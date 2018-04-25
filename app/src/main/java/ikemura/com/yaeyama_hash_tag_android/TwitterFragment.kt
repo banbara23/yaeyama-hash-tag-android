@@ -1,11 +1,13 @@
 package ikemura.com.yaeyama_hash_tag_android
 
 
+import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import ikemura.com.yaeyama_hash_tag_android.databinding.FragmentTwitterBinding
 
 
 // TODO: Rename parameter arguments, choose names that match
@@ -24,7 +26,7 @@ class TwitterFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
-//    private lateinit var binding: Frag
+    private lateinit var binding: FragmentTwitterBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,8 +39,8 @@ class TwitterFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
-//        binding = DataBindingUtil.inflate<>(inflater, R.layout.fragment_twitter, container, false)
-        return inflater.inflate(R.layout.fragment_twitter, container, false)
+        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_twitter, container, false)
+        return binding.root
     }
 
 
