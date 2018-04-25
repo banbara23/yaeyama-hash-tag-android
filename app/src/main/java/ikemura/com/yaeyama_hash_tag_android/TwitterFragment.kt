@@ -1,12 +1,14 @@
 package ikemura.com.yaeyama_hash_tag_android
 
 
+import android.annotation.SuppressLint
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.webkit.WebViewClient
 import ikemura.com.yaeyama_hash_tag_android.databinding.FragmentTwitterBinding
 
 
@@ -36,10 +38,14 @@ class TwitterFragment : Fragment() {
         }
     }
 
+    @SuppressLint("SetJavaScriptEnabled")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_twitter, container, false)
+        binding.webView.webViewClient = WebViewClient()
+        binding.webView.loadUrl("https://twitter.com/search?q=%23%E5%85%AB%E9%87%8D%E5%B1%B1&src=typd&lang=ja")
+        binding.webView.settings.javaScriptEnabled = true
         return binding.root
     }
 
