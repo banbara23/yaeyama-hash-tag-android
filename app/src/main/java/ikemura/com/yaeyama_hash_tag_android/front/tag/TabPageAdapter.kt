@@ -1,4 +1,4 @@
-package ikemura.com.yaeyama_hash_tag_android
+package ikemura.com.yaeyama_hash_tag_android.front.top.tag
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager

@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".TabActivityFragment"
+        tools:context=".front.top.tag.TabActivityFragment"
         tools:showIn="@layout/tab_activity"
         >
 

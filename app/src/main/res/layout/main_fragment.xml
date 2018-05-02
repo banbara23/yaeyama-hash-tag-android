@@ -3,7 +3,7 @@
     <data>
         <variable
             name="fragment"
-            type="ikemura.com.yaeyama_hash_tag_android.MainFragment"
+            type="ikemura.com.yaeyama_hash_tag_android.front.top.top.MainFragment"
             />
     </data>
 
@@ -19,7 +19,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            tools:context=".MainFragment"
+            tools:context=".front.top.top.MainFragment"
             >
 
             <Button

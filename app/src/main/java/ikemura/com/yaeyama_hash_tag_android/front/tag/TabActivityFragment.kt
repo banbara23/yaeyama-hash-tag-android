@@ -1,4 +1,4 @@
-package ikemura.com.yaeyama_hash_tag_android
+package ikemura.com.yaeyama_hash_tag_android.front.top.tag
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
@@ -6,6 +6,9 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import ikemura.com.yaeyama_hash_tag_android.KEY_DATA
+import ikemura.com.yaeyama_hash_tag_android.R
+import ikemura.com.yaeyama_hash_tag_android.Tag
 import ikemura.com.yaeyama_hash_tag_android.databinding.FragmentTabBinding
 
 class TabActivityFragment : Fragment() {

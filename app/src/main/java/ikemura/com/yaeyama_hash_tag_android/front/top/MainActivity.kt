@@ -1,7 +1,8 @@
-package ikemura.com.yaeyama_hash_tag_android
+package ikemura.com.yaeyama_hash_tag_android.front.top.top
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
+import ikemura.com.yaeyama_hash_tag_android.R
 
 class MainActivity : AppCompatActivity() {
 

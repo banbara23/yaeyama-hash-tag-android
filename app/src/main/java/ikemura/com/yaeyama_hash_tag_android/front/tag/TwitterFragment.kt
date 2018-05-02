@@ -1,20 +1,25 @@
-package ikemura.com.yaeyama_hash_tag_android
+package ikemura.com.yaeyama_hash_tag_android.front.top.tag
 
 
 import android.annotation.SuppressLint
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v4.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebViewClient
+import ikemura.com.yaeyama_hash_tag_android.KEY_DATA
+import ikemura.com.yaeyama_hash_tag_android.R
+import ikemura.com.yaeyama_hash_tag_android.Tag
 import ikemura.com.yaeyama_hash_tag_android.databinding.FragmentTwitterBinding
 
 
-class InstagramFragment : Fragment() {
-    var TAG = InstagramFragment::class.java.simpleName
+class TwitterFragment : Fragment() {
+    var TAG = TwitterFragment::class.java.simpleName
     private lateinit var tag: Tag
+
     private lateinit var binding: FragmentTwitterBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,11 +32,13 @@ class InstagramFragment : Fragment() {
     @SuppressLint("SetJavaScriptEnabled")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
                               savedInstanceState: Bundle?): View? {
+        val code = tag.code
+        Log.d(TAG,code)
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_twitter, container, false)
         binding.webView.webViewClient = WebViewClient()
-        binding.webView.settings.javaScriptEnabled = true
-        binding.webView.loadUrl("https://www.instagram.com/explore/tags/%E5%85%AB%E9%87%8D%E5%B1%B1/?hl=ja")
+        binding.webView.loadUrl("file:///android_asset/index.html")
 
+        binding.webView.settings.javaScriptEnabled = true
         return binding.root
     }
 
@@ -40,8 +47,8 @@ class InstagramFragment : Fragment() {
 
         @JvmStatic
         fun newInstance(args: Bundle?) =
-                InstagramFragment().apply {
-                    args ?:run { Bundle() }
+                TwitterFragment().apply {
+                    args ?: run { Bundle() }
                     arguments = args
                 }
     }
