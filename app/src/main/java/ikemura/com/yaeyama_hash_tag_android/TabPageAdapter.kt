@@ -4,13 +4,14 @@ import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
 
-class TabPageAdapter(fm: FragmentManager?, private var tabCount: Int) : FragmentPagerAdapter(fm) {
+class TabPageAdapter(
+        fm: FragmentManager?,
+        private var tabCount: Int,
+        var pageEntry: TabActivityFragment.PageEntry
+) : FragmentPagerAdapter(fm) {
+
     override fun getItem(position: Int): Fragment {
-        return when (position) {
-            0 -> TwitterFragment.newInstance("", "")
-            1 -> InstagramFragment.newInstance("", "")
-            else -> TwitterFragment.newInstance("", "")
-        }
+        return pageEntry.create(position)
     }
 
     override fun getCount(): Int {
