@@ -1,4 +1,4 @@
-package ikemura.com.yaeyama_hash_tag_android.front.top.top
+package ikemura.com.yaeyama_hash_tag_android.front.top
 
 import android.content.Intent
 import android.databinding.DataBindingUtil
@@ -7,10 +7,15 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import ikemura.com.yaeyama_hash_tag_android.KEY_DATA
 import ikemura.com.yaeyama_hash_tag_android.R
+import ikemura.com.yaeyama_hash_tag_android.Tag
 import ikemura.com.yaeyama_hash_tag_android.databinding.MainFragmentBinding
-import ikemura.com.yaeyama_hash_tag_android.front.top.tag.TabActivity
+import ikemura.com.yaeyama_hash_tag_android.front.tag.TabActivity
 
+/**
+ * トップメニュー画面のFragment
+ */
 class MainFragment : Fragment() {
     lateinit var binding: MainFragmentBinding
 
@@ -21,7 +26,10 @@ class MainFragment : Fragment() {
         return binding.root
     }
 
-     fun navigateToTabActivity(s: String) {
+    fun navigateToTabActivity(tag: Tag) {
+        println(tag.code)
+        val bundle = Bundle()
+        bundle.putSerializable(KEY_DATA, tag)
         startActivity(Intent(activity, TabActivity::class.java))
     }
 

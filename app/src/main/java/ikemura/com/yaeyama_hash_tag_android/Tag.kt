@@ -1,11 +1,16 @@
 package ikemura.com.yaeyama_hash_tag_android
 
-enum class Tag(val code:String, val title:String,val instaUrl:String) {
+enum class Tag(val code: String, val title: String, val instaUrl: String) {
     Yaeyama(
             "yaeyama",
             "#八重山",
             "https://www.instagram.com/explore/tags/%E5%85%AB%E9%87%8D%E5%B1%B1/?hl=ja"
-            ),
+    ),
+    Ishigaki(
+            "ishigaki",
+            "#石垣島",
+            "https://www.instagram.com/explore/tags/%E7%9F%B3%E5%9E%A3%E5%B3%B6/?hl=ja"
+    ),
     Taketomi(
             "taketomi",
             "#竹富島",
@@ -14,5 +19,25 @@ enum class Tag(val code:String, val title:String,val instaUrl:String) {
     Kohama("kohama",
             "#小浜島",
             "https://www.instagram.com/explore/tags/%E5%B0%8F%E6%B5%9C%E5%B3%B6/?hl=ja"
+    ),
+    Kuroshima("kuroshima",
+            "#黒島",
+            "https://www.instagram.com/explore/tags/%E9%BB%92%E5%B3%B6/?hl=ja"
+    ),
+    Iriomote("iriomote",
+            "#西表島",
+            "https://www.instagram.com/explore/tags/%E8%A5%BF%E8%A1%A8%E5%B3%B6/?hl=ja"
+    ),
+    Hatoma("hatoma",
+            "#鳩間島",
+            "https://www.instagram.com/explore/tags/%E9%B3%A9%E9%96%93%E5%B3%B6/?hl=ja"
+    ),
+    Hateruma("hateruma",
+            "#波照間島",
+            "https://www.instagram.com/explore/tags/%E6%B3%A2%E7%85%A7%E9%96%93%E5%B3%B6/?hl=ja"
+    ),
+    Yonaguni("yonaguni",
+            "#与那国島",
+            "https://www.instagram.com/explore/tags/%E4%B8%8E%E9%82%A3%E5%9B%BD%E5%B3%B6/?hl=ja"
     ),
 }

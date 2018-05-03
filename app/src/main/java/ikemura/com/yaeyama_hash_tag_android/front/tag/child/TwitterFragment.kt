@@ -42,7 +42,6 @@ class TwitterFragment : Fragment() {
         return binding.root
     }
 
-
     companion object {
 
         @JvmStatic

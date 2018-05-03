@@ -1,4 +1,4 @@
-package ikemura.com.yaeyama_hash_tag_android.front.top.tag
+package ikemura.com.yaeyama_hash_tag_android.front.tag
 
 import android.databinding.DataBindingUtil
 import android.os.Bundle
@@ -10,8 +10,10 @@ import ikemura.com.yaeyama_hash_tag_android.KEY_DATA
 import ikemura.com.yaeyama_hash_tag_android.R
 import ikemura.com.yaeyama_hash_tag_android.Tag
 import ikemura.com.yaeyama_hash_tag_android.databinding.FragmentTabBinding
+import ikemura.com.yaeyama_hash_tag_android.front.top.tag.InstagramFragment
+import ikemura.com.yaeyama_hash_tag_android.front.top.tag.TwitterFragment
 
-class TabActivityFragment : Fragment() {
+class TabFragment : Fragment() {
 
     lateinit var binding: FragmentTabBinding
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,

@@ -1,4 +1,4 @@
-package ikemura.com.yaeyama_hash_tag_android.front.top.tag
+package ikemura.com.yaeyama_hash_tag_android.front.tag
 
 import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
@@ -7,7 +7,7 @@ import android.support.v4.app.FragmentPagerAdapter
 class TabPageAdapter(
         fm: FragmentManager?,
         private var tabCount: Int,
-        var pageEntry: TabActivityFragment.PageEntry
+        var pageEntry: TabFragment.PageEntry
 ) : FragmentPagerAdapter(fm) {
 
     override fun getItem(position: Int): Fragment {

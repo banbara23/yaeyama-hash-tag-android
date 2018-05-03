@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout>
+
     <data>
+
         <variable
             name="fragment"
-            type="ikemura.com.yaeyama_hash_tag_android.front.top.top.MainFragment"
+            type="ikemura.com.yaeyama_hash_tag_android.front.top.MainFragment"
             />
+
+        <import type="ikemura.com.yaeyama_hash_tag_android.Tag"/>
     </data>
 
     <ScrollView
@@ -23,19 +27,66 @@
             >
 
             <Button
-                android:id="@+id/yaeyama"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick='@{() -> fragment.navigateToTabActivity(Tag.Yaeyama)}'
                 android:text="#八重山"
-                android:onClick='@{() -> fragment.navigateToTabActivity("yaeyama")}'
                 />
 
             <Button
-                android:id="@+id/ishigaki"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:onClick='@{() -> fragment.navigateToTabActivity(Tag.Ishigaki)}'
                 android:text="#石垣島"
-                android:onClick='@{() -> fragment.navigateToTabActivity("ishigaki")}'
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick='@{() -> fragment.navigateToTabActivity(Tag.Taketomi)}'
+                android:text="#竹富島"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick='@{() -> fragment.navigateToTabActivity(Tag.Kohama)}'
+                android:text="#小浜島"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick='@{() -> fragment.navigateToTabActivity(Tag.Kuroshima)}'
+                android:text="#黒島"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick='@{() -> fragment.navigateToTabActivity(Tag.Iriomote)}'
+                android:text="#西表島"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick='@{() -> fragment.navigateToTabActivity(Tag.Hatoma)}'
+                android:text="#波照間"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick='@{() -> fragment.navigateToTabActivity(Tag.Hateruma)}'
+                android:text="#波照間島"
+                />
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick='@{() -> fragment.navigateToTabActivity(Tag.Yonaguni)}'
+                android:text="#与那国島"
                 />
         </LinearLayout>
     </ScrollView>
