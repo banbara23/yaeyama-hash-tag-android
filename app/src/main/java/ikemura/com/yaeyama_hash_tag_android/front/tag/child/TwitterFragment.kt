@@ -78,6 +78,10 @@ class TwitterFragment : Fragment() {
         }
     }
 
+    fun onClickUpdate() {
+        binding.webView.reload()
+    }
+
     companion object {
 
         @JvmStatic

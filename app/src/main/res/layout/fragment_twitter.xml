@@ -58,6 +58,14 @@
                 android:src="@{canForward ? @drawable/ic_arrow_forward_black : @drawable/ic_arrow_forward_gray}"
                 tools:src="@drawable/ic_arrow_forward_gray"
                 />
+
+            <ImageView
+                android:layout_width="@dimen/browser_back_foward_icon_size"
+                android:layout_height="@dimen/browser_back_foward_icon_size"
+                android:layout_marginLeft="8dp"
+                android:onClick="@{() -> fragment.onClickUpdate()}"
+                app:srcCompat="@drawable/ic_autorenew_black_24dp"
+                />
         </LinearLayout>
     </LinearLayout>
 </layout>
