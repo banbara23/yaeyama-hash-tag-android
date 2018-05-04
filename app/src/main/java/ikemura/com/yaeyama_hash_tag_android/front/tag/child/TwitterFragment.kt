@@ -48,7 +48,6 @@ class TwitterFragment : Fragment() {
 
         // WebView設定
         binding.webView.apply {
-            webViewClient = WebViewClient()
             loadUrl("file:///android_asset/$code.html")
             settings.loadWithOverviewMode = true
             settings.javaScriptEnabled = true
