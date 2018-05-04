@@ -22,7 +22,6 @@
         <activity
             android:name=".front.tag.TabActivity"
             android:label="@string/title_activity_tab"
-            android:theme="@style/AppTheme.NoActionBar"
             >
         </activity>
     </application>

@@ -1,24 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     >
 
     <data>
 
+        <variable
+            name="fragment"
+            type="ikemura.com.yaeyama_hash_tag_android.front.tag.child.TwitterFragment"
+            />
+
+        <variable
+            name="canBack"
+            type="android.databinding.ObservableBoolean"
+            />
+
+        <variable
+            name="canForward"
+            type="android.databinding.ObservableBoolean"
+            />
     </data>
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".front.top.tag.TwitterFragment"
+        android:orientation="vertical"
+        tools:context=".front.tag.child.TwitterFragment"
         >
 
         <WebView
             android:id="@+id/web_view"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
             />
 
-    </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            >
+
+            <ImageView
+                android:layout_width="@dimen/browser_back_foward_icon_size"
+                android:layout_height="@dimen/browser_back_foward_icon_size"
+                android:onClick="@{() -> fragment.onClickLeft()}"
+                android:src="@{canBack ? @drawable/ic_arrow_back_black : @drawable/ic_arrow_back_gray}"
+                tools:src="@drawable/ic_arrow_back_black"
+                />
+
+            <ImageView
+                android:layout_width="@dimen/browser_back_foward_icon_size"
+                android:layout_height="@dimen/browser_back_foward_icon_size"
+                android:layout_marginLeft="8dp"
+                android:onClick="@{() -> fragment.onClickRight()}"
+                android:src="@{canForward ? @drawable/ic_arrow_forward_black : @drawable/ic_arrow_forward_gray}"
+                tools:src="@drawable/ic_arrow_forward_gray"
+                />
+        </LinearLayout>
+    </LinearLayout>
 </layout>

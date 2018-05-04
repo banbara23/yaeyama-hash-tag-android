@@ -30,7 +30,7 @@ class MainFragment : Fragment() {
         println(tag.code)
         val bundle = Bundle()
         bundle.putSerializable(KEY_DATA, tag)
-        startActivity(Intent(activity, TabActivity::class.java))
+        startActivity(Intent(activity, TabActivity::class.java).putExtras(bundle))
     }
 
 }
