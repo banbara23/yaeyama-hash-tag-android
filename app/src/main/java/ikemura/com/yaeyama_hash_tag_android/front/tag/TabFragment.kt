@@ -24,6 +24,7 @@ class TabFragment : Fragment() {
         arguments?.let {
             tag = it.get(KEY_DATA) as Tag
             Log.d(TAG, tag.toString())
+            activity!!.title = tag.title
         }
     }
 

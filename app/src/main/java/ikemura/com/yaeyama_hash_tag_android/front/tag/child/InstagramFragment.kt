@@ -38,7 +38,7 @@ class InstagramFragment : Fragment() {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_instagram, container, false)
         binding.webView.settings.loadWithOverviewMode = true
         binding.webView.settings.javaScriptEnabled = true
-        binding.webView.loadUrl("https://www.instagram.com/explore/tags/%E5%85%AB%E9%87%8D%E5%B1%B1/?hl=ja")
+        binding.webView.loadUrl(tag.instaUrl)
         binding.webView.webViewClient = object : WebViewClient() {
             override fun onPageFinished(view: WebView, url: String) {
                 super.onPageFinished(view, url)
