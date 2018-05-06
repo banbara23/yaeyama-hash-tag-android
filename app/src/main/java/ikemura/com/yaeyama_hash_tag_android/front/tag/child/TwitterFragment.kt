@@ -5,8 +5,8 @@ import android.annotation.SuppressLint
 import android.databinding.DataBindingUtil
 import android.databinding.ObservableBoolean
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.util.Log
+import android.view.KeyEvent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -18,7 +18,7 @@ import ikemura.com.yaeyama_hash_tag_android.Tag
 import ikemura.com.yaeyama_hash_tag_android.databinding.FragmentTwitterBinding
 
 
-class TwitterFragment : Fragment() {
+class TwitterFragment : BaseWebFragment() {
     private var TAG = TwitterFragment::class.java.simpleName
     private lateinit var tag: Tag
 
@@ -59,6 +59,16 @@ class TwitterFragment : Fragment() {
                 }
             }
         }
+        binding.root.setOnKeyListener { view, keyCode, keyEvent ->
+            (keyCode == KeyEvent.KEYCODE_BACK && keyEvent.action == KeyEvent.ACTION_UP).apply {
+                if (binding.webView.canGoBack()) {
+                    binding.webView.goBack()
+                }
+            }
+
+            view.isFocusableInTouchMode = true
+            view.requestFocus()
+        }
 
         return binding.root
     }
@@ -79,6 +89,19 @@ class TwitterFragment : Fragment() {
 
     fun onClickUpdate() {
         binding.webView.reload()
+    }
+
+    override fun onBackPressed() {
+        if (binding.webView.canGoBack()) {
+            binding.webView.goBack()
+            Log.d(TAG, "back")
+        }
+        else {
+
+        }
+        if (binding.webView.canGoBack())
+
+        Log.d(TAG,"Twitter onBackPressed")
     }
 
     companion object {

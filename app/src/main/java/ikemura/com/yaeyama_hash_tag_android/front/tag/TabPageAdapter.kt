@@ -1,8 +1,8 @@
 package ikemura.com.yaeyama_hash_tag_android.front.tag
 
-import android.support.v4.app.Fragment
 import android.support.v4.app.FragmentManager
 import android.support.v4.app.FragmentPagerAdapter
+import ikemura.com.yaeyama_hash_tag_android.front.tag.child.BaseWebFragment
 
 class TabPageAdapter(
         fm: FragmentManager?,
@@ -10,7 +10,7 @@ class TabPageAdapter(
         var pageEntry: TabFragment.PageEntry
 ) : FragmentPagerAdapter(fm) {
 
-    override fun getItem(position: Int): Fragment {
+    override fun getItem(position: Int): BaseWebFragment {
         return pageEntry.create(position)
     }
 

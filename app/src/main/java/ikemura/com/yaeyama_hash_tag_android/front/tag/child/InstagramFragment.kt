@@ -5,7 +5,6 @@ import android.annotation.SuppressLint
 import android.databinding.DataBindingUtil
 import android.databinding.ObservableBoolean
 import android.os.Bundle
-import android.support.v4.app.Fragment
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -18,7 +17,7 @@ import ikemura.com.yaeyama_hash_tag_android.Tag
 import ikemura.com.yaeyama_hash_tag_android.databinding.FragmentInstagramBinding
 
 
-class InstagramFragment : Fragment() {
+class InstagramFragment : BaseWebFragment() {
     var TAG = InstagramFragment::class.java.simpleName
     private lateinit var tag: Tag
     private lateinit var binding: FragmentInstagramBinding
@@ -70,6 +69,10 @@ class InstagramFragment : Fragment() {
 
     fun onClickUpdate() {
         binding.webView.reload()
+    }
+
+    override fun onBackPressed() {
+        Log.d(TAG, "Instagram onBackPressed")
     }
 
     companion object {

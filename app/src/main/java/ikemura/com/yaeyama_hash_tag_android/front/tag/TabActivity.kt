@@ -7,6 +7,7 @@ import ikemura.com.yaeyama_hash_tag_android.R
 
 
 class TabActivity : AppCompatActivity() {
+    lateinit var fragment: TabFragment
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,15 +18,22 @@ class TabActivity : AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)
         supportActionBar!!.setDisplayShowHomeEnabled(true)
 
+        fragment = TabFragment.newInstance(intent.extras)
+
         //Fragment
         supportFragmentManager
                 .beginTransaction()
-                .replace(R.id.tab_container, TabFragment.newInstance(intent.extras))
+                .replace(R.id.tab_container, fragment)
                 .commit()
     }
 
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
+    }
+
+    override fun onBackPressed() {
+        fragment.onBackPressed()
+        super.onBackPressed()
     }
 }
