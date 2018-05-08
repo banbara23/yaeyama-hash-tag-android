@@ -71,8 +71,9 @@ class InstagramFragment : BaseWebFragment() {
         binding.webView.reload()
     }
 
-    override fun onBackPressed() {
+    override fun onBackPressed(): Boolean {
         Log.d(TAG, "Instagram onBackPressed")
+        return true
     }
 
     companion object {

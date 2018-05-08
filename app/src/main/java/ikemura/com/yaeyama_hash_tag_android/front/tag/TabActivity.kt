@@ -28,12 +28,12 @@ class TabActivity : AppCompatActivity() {
     }
 
     override fun onSupportNavigateUp(): Boolean {
-        onBackPressed()
+        finish()
         return true
     }
 
     override fun onBackPressed() {
-        fragment.onBackPressed()
+//        fragment.onBackPressed()
         super.onBackPressed()
     }
 }

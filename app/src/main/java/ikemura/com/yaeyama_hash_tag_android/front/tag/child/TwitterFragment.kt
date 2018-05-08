@@ -73,6 +73,11 @@ class TwitterFragment : BaseWebFragment() {
         return binding.root
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        binding.unbind()
+    }
+
     fun onClickLeft() {
         if (binding.webView.canGoBack()) {
             binding.webView.goBack()
@@ -91,17 +96,21 @@ class TwitterFragment : BaseWebFragment() {
         binding.webView.reload()
     }
 
-    override fun onBackPressed() {
-        if (binding.webView.canGoBack()) {
-            binding.webView.goBack()
-            Log.d(TAG, "back")
-        }
-        else {
+    override fun onBackPressed():Boolean {
+        //UninitializedPropertyAccessExceptionで落ちる対応
+//        if (!::binding.isInitialized) return false
 
-        }
-        if (binding.webView.canGoBack())
+//        val action = binding.webView.canGoBack()
+//
+//        if (binding.webView.canGoBack()) {
+//            binding.webView.goBack()
+//            Log.d(TAG, "back")
+//        }
+
+//        if (binding.webView.canGoBack())
 
         Log.d(TAG,"Twitter onBackPressed")
+        return true
     }
 
     companion object {
