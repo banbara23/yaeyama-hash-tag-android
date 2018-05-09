@@ -15,8 +15,7 @@ class TabActivity : AppCompatActivity() {
         AppCompatDelegate.setCompatVectorFromResourcesEnabled(true)
 
         setContentView(R.layout.tab_activity)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)
-        supportActionBar!!.setDisplayShowHomeEnabled(true)
+        supportActionBar?.apply { setDisplayHomeAsUpEnabled(true) }
 
         fragment = TabFragment.newInstance(intent.extras)
 
