@@ -27,7 +27,6 @@
         </activity>
         <activity
             android:name=".front.tag.TabActivity"
-            android:label="@string/title_activity_tab"
             android:screenOrientation="portrait"
             >
         </activity>
