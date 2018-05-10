@@ -1,6 +1,5 @@
 package ikemura.com.yaeyama_hash_tag_android.front.tag.child
 
-
 import android.annotation.SuppressLint
 import android.databinding.DataBindingUtil
 import android.databinding.ObservableBoolean
@@ -15,7 +14,6 @@ import ikemura.com.yaeyama_hash_tag_android.KEY_DATA
 import ikemura.com.yaeyama_hash_tag_android.R
 import ikemura.com.yaeyama_hash_tag_android.Tag
 import ikemura.com.yaeyama_hash_tag_android.databinding.FragmentInstagramBinding
-
 
 class InstagramFragment : BaseWebFragment() {
     var TAG = InstagramFragment::class.java.simpleName
