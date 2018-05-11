@@ -1,4 +1,6 @@
 <resources>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="browser_back_foward_icon_size">38dp</dimen>
+    <dimen name="top_card_height">80dp</dimen>
+
 </resources>

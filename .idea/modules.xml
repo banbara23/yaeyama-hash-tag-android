@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/yaeyama-hash-tag-android.iml" filepath="$PROJECT_DIR$/yaeyama-hash-tag-android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/yaeyamahashtagandroid.iml" filepath="$PROJECT_DIR$/yaeyamahashtagandroid.iml" />
     </modules>
   </component>
 </project>

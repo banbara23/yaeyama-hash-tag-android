@@ -22,9 +22,6 @@ class MainActivity : AppCompatActivity() {
             ).start(this.getApplication())
         }
 
-        supportActionBar?.apply {
-            hide()
-        }
         // initialize Fragment
         setContentView(R.layout.main_activity)
         supportFragmentManager
